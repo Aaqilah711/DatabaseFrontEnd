@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lab Access</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 90vh;
+            margin: 0;
+            background-color: #c6c6c6;
+        }
+
+        
+
+        .button-container {
+            text-align: center;
+
+        }
+
+        .button-container button {
+            margin: 10px;
+            padding: 20px 70px;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            cursor: pointer;
+            
+            background: #865a70;
+            background: -webkit-linear-gradient(left, #482f39, #633249, #a24370);
+            background: -o-linear-gradient(left,  #482f39, #633249, #a24370);
+            background: -moz-linear-gradient(left,  #482f39, #633249, #a24370);
+            background: linear-gradient(left,  #482f39, #633249, #a24370);
+            position: relative;
+            z-index: 1;
+
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            transition-duration: 0.4s;
+        }
+
+        .button-container::before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            /* border-radius: 21px; */
+            background-color: #939393;
+            top: 0;
+            left: 0;
+            opacity: 0;
+
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+}
+
+        .button-container button:hover {
+            background-color: transparent;
+            color: black;
+            border:  solid #4CAF50;
+
+        }
+
+        
+
+        .button-container:hover:before {
+            opacity: 1;
+            }
+            
+        .adm{
+            font-weight: bolder; 
+            font-size: 40px;
+            padding-bottom: 30px;
+            color: #232323;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div adm class="adm">
+        LAB ACCESS
+    </div>
+    <div class="button-container">
+        <button onclick="location.href = 'viewlab.php';">VIEW DATABASE</button>
+        <button onclick="location.href = 'addlab.php';">ADD ENTRY</button>
+    </div>
+
+    
+
+</body>
+</html>
